@@ -93,8 +93,39 @@ public class GameMgr : MonoBehaviour
         }
     }
 
-    public void Retry()
+    public void Restart()
     {
+        curCnt = 0;
+        maxCnt = 0;
+        mapGenerator.LoadMapData(curLv);
+        mapGenerator.MapDestroy();
+        mapGenerator.MakeMap();
+    }
 
+    public void Next()
+    {
+        if (curLv != maxLv)
+        {
+            curCnt = 0;
+            maxCnt = 0;
+            curLv++;
+            mapGenerator.LoadMapData(curLv);
+            mapGenerator.MapDestroy();
+            mapGenerator.MakeMap();
+        }
+       
+    }
+    public void Previous()
+    {
+        if(curLv != 1)
+        {
+            curCnt = 0;
+            maxCnt = 0;
+            curLv--;
+            mapGenerator.LoadMapData(curLv);
+            mapGenerator.MapDestroy();
+            mapGenerator.MakeMap();
+        }
+        
     }
 }
