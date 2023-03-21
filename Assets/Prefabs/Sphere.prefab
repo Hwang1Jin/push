@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615e222f742b7164fb690af5e98e9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  effect: {fileID: 5024009746357069194, guid: ec3f674830402cc45bce805cf6493db7, type: 3}
+  groundEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
 --- !u!54 &-1877576030498149916
 Rigidbody:
   m_ObjectHideFlags: 0
